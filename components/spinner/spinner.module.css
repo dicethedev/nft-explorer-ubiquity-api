@@ -1,0 +1,32 @@
+.spinner_container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.spinner_container::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 5px solid transparent;
+  border-top-color: #f48700;
+  border-right-color: #f48700;
+  border-left-color: #f48700;
+  border-radius: 50%;
+  animation: loading-spinner 1s linear infinite;
+}
+
+@keyframes loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
